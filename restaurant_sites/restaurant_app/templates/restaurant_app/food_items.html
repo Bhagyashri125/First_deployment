@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends "restaurant_app/base.html" %}
+{% block content %}
+
+  <div class = "item_box" >
+    <h3 style="text-decoration: underline;"> {{section}} </h3>
+      {% for food_items in items_list %}
+        {{ food_items.item}}
+        <p class='item_description'>{{food_items.item_description}}</p>
+
+      {% endfor %}
+
+      <a class="navbar-brand" style="font-size: 25px;text-decoration:underline;" href="{% url 'menu'%}">Go To Menu</a>
+      <br> <a class="navbar-brand" style="font-size: 25px;text-decoration:underline;" href="/{{next_section}}"> Go To {{next_section}}  </a>
+  </div>
+
+  <div class="site_footer" style="position: relative;">
+
+
+
+    <br><p> </p>
+    <br><p> </p>
+    <br><p> </p>
+    <br><p> </p>
+
+  </div>
+{% endblock %}

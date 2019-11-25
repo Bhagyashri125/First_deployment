@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends "restaurant_app/base.html" %}
+{% block content %}
+
+  <div class = "contact_box">
+    <h1>Contact</h1>
+    <hr>
+    <h2>Chili's South Indian Cuisine</h2>
+    <p>4220 University Way NE</p>
+    <p>Seattle, WA 98105</p>
+    <p>United States</p>
+    <p>Phone: 206-633-1458 Alternative: 206-412-0874</p>
+    <p>EMAIL : av_sam@yahoo.com</p>
+    <hr>
+    <form method='POST'>
+      {{form.as_p}}
+      {% csrf_token %}
+      <input type='submit' class='btn btn-primary' value='Send'>
+    </form>
+  </div>
+
+{% endblock %}

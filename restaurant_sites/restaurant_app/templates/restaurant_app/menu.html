@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends "restaurant_app/base.html" %}
+{% block content %}
+  <img class="img1" src="static/images/food.jpg" alt="Smiley face" align="left">
+  <img class="img2" src="static/images/idol.jpg" alt="Smiley face" align="right">
+  <div class = "menu_box">
+    {% for category in categories %}
+      <br><a href="{% url 'food_items' section=category  %}" style="color: inherit;"> {{category}}</a>
+    {% endfor %}
+
+  </div>
+
+{% endblock %}

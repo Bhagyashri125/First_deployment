@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>www.chilli.com</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Kalam&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Dancing+Script|Kalam&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+    <!--Menu box font -->
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Staatliches&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <nav class="navbar fixed-top navbar-dark bg-dark">
+      <div class="container">
+
+            <a class="navbar-brand" href="{% url 'index'%}">Home</a>
+            <a class="navbar-brand" href="{% url 'about'%}">About</a>
+            <a class="navbar-brand" href="{% url 'menu'%}">Menu</a>
+            <a class="navbar-brand" href="{% url 'order_pickup'%}">Order Pickup</a>
+            <a class="navbar-brand" href="{% url 'contact'%}">Contact</a>
+      </div>
+    </nav>
+    <div class="top_box">
+      <h1>Chilli's South Indian Restaurant</h1>
+      <h1>206-633-1458</h1>
+    </div>
+    {% block content %}
+    <div class="jumbotron bg">
+      <div class= "box">
+        <h1 class="header">Hours</h1
+        <p>-----</p>
+        <p class="time">Tue-Sun</p>
+        <p class="time">11 AM - 2:30 PM</p>
+        <p class="time">3:30 PM - 9:30 PM</p>
+        <p>-----</p>
+        <h3>Lunch Buffet</h3>
+        <p class="time">Tue-Sun</p>
+        <p class="time">11AM - 2PM</p>
+      </div>
+    </div>
+    {% endblock %}
+    <footer class="site-footer">
+      <div >
+        <p>4220 University Way NE </p>
+        <p>Seattle, WA 98105 </p>
+        <p>Phone: 206-633-1458 | Alternative: 206-412-0874</p>
+        <p>© 2019 Chili's South Indian Restaurant. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
